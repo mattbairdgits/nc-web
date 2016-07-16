@@ -1,0 +1,21 @@
+.row {
+  @include outer-container;
+  padding: 0 $base-spacing;
+}
+.og-row {
+  @include outer-container;
+}
+.landing {
+    background-color: white;
+    padding: 5em 0 9em;
+}
+img {
+  width: 100%;
+}
+
+.background { background-size: cover; }
+
+body {
+  background: url('../img/stardust.png') repeat;
+  padding-bottom: 8em;
+}

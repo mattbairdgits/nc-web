@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+</head>
+<body>
+<h1 id="contributingtohtml5boilerplate">Contributing to HTML5 Boilerplate</h1>
+
+<p>♥ <a href="https://html5boilerplate.com">HTML5 Boilerplate</a> and want to get involved?
+Thanks! There are plenty of ways you can help!</p>
+
+<p>Please take a moment to review this document in order to make the contribution
+process easy and effective for everyone involved.</p>
+
+<p>Following these guidelines helps to communicate that you respect the time of
+the developers managing and developing this open source project. In return,
+they should reciprocate that respect in addressing your issue or assessing
+patches and features.</p>
+
+<h2 id="usingtheissuetracker">Using the issue tracker</h2>
+
+<p>The <a href="https://github.com/h5bp/html5-boilerplate/issues">issue tracker</a> is
+the preferred channel for <a href="#bugs">bug reports</a>, <a href="#features">features requests</a>
+and <a href="#pull-requests">submitting pull requests</a>, but please respect the following
+restrictions:</p>
+
+<ul>
+<li><p>Please <strong>do not</strong> use the issue tracker for personal support requests (use
+ <a href="https://stackoverflow.com/questions/tagged/html5boilerplate">Stack Overflow</a>).</p></li>
+<li><p>Please <strong>do not</strong> derail or troll issues. Keep the discussion on topic and
+ respect the opinions of others.</p></li>
+<li><p>Please <strong>do not</strong> open issues or pull requests regarding the code in
+ <a href="https://github.com/h5bp/server-configs-apache"><code>.htaccess</code></a>,
+ <a href="https://github.com/jquery/jquery/"><code>jQuery</code></a>,
+ <a href="https://github.com/Modernizr/Modernizr"><code>Modernizr</code></a> or
+ <a href="https://github.com/necolas/normalize.css"><code>Normalize.css</code></a> (open them in
+ their respective repositories).</p></li>
+</ul>
+
+<p><a name="bugs"></a></p>
+
+<h2 id="bugreports">Bug reports</h2>
+
+<p>A bug is a <em>demonstrable problem</em> that is caused by the code in the repository.
+Good bug reports are extremely helpful - thank you!</p>
+
+<p>Guidelines for bug reports:</p>
+
+<ol>
+<li><p><strong>Use the GitHub issue search</strong> &mdash; check if the issue has already been
+ reported.</p></li>
+<li><p><strong>Check if the issue has been fixed</strong> &mdash; try to reproduce it using the
+ latest <code>master</code> or development branch in the repository.</p></li>
+<li><p><strong>Isolate the problem</strong> &mdash; ideally create a <a href="https://css-tricks.com/reduced-test-cases/">reduced test
+ case</a> and a live example.</p></li>
+</ol>
+
+<p>A good bug report shouldn&#8217;t leave others needing to chase you up for more
+information. Please try to be as detailed as possible in your report. What is
+your environment? What steps will reproduce the issue? What browser(s) and OS
+experience the problem? What would you expect to be the outcome? All these
+details will help people to fix any potential bugs.</p>
+
+<p>Example:</p>
+
+<blockquote>
+<p>Short and descriptive example bug report title</p>
+
+<p>A summary of the issue and the browser/OS environment in which it occurs. If
+suitable, include the steps required to reproduce the bug.</p>
+
+<ol>
+<li>This is the first step</li>
+<li>This is the second step</li>
+<li>Further steps, etc.</li>
+</ol>
+
+<p><code>&lt;url&gt;</code> - a link to the reduced test case</p>
+
+<p>Any other information you want to share that is relevant to the issue being
+reported. This might include the lines of code that you have identified as
+causing the bug, and potential solutions (and your opinions on their
+merits).</p>
+</blockquote>
+
+<p><a name="features"></a></p>
+
+<h2 id="featurerequests">Feature requests</h2>
+
+<p>Feature requests are welcome. But take a moment to find out whether your idea
+fits with the scope and aims of the project. It&#8217;s up to <em>you</em> to make a strong
+case to convince the project&#8217;s developers of the merits of this feature. Please
+provide as much detail and context as possible.</p>
+
+<p><a name="pull-requests"></a></p>
+
+<h2 id="pullrequests">Pull requests</h2>
+
+<p>Good pull requests - patches, improvements, new features - are a fantastic
+help. They should remain focused in scope and avoid containing unrelated
+commits.</p>
+
+<p><strong>Please ask first</strong> before embarking on any significant pull request (e.g.
+implementing features, refactoring code, porting to a different language),
+otherwise you risk spending a lot of time working on something that the
+project&#8217;s developers might not want to merge into the project.</p>
+
+<p>Please adhere to the coding conventions used throughout a project (indentation,
+accurate comments, etc.) and any other requirements (such as test coverage).</p>
+
+<p>Adhering to the following process is the best way to get your work
+included in the project:</p>
+
+<ol>
+<li><a href="https://help.github.com/articles/fork-a-repo/">Fork</a> the project, clone your
+ fork, and configure the remotes:</li>
+</ol>
+
+<pre><code class="bash">   # Clone your fork of the repo into the current directory
+   git clone https://github.com/&lt;your-username&gt;/html5-boilerplate.git
+   # Navigate to the newly cloned directory
+   cd html5-boilerplate
+   # Assign the original repo to a remote called &quot;upstream&quot;
+   git remote add upstream https://github.com/h5bp/html5-boilerplate.git
+</code></pre>
+
+<ol>
+<li>If you cloned a while ago, get the latest changes from upstream:</li>
+</ol>
+
+<pre><code class="bash">   git checkout master
+   git pull upstream master
+</code></pre>
+
+<ol>
+<li>Create a new topic branch (off the main project development branch) to
+ contain your feature, change, or fix:</li>
+</ol>
+
+<pre><code class="bash">   git checkout -b &lt;topic-branch-name&gt;
+</code></pre>
+
+<ol>
+<li><p>Commit your changes in logical chunks. Please adhere to these <a href="http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html">git commit
+ message guidelines</a>
+ or your code is unlikely be merged into the main project. Use Git&#8217;s
+ <a href="https://help.github.com/articles/about-git-rebase/">interactive rebase</a>
+ feature to tidy up your commits before making them public.</p></li>
+<li><p>Locally merge (or rebase) the upstream development branch into your topic branch:</p></li>
+</ol>
+
+<pre><code class="bash">   git pull [--rebase] upstream master
+</code></pre>
+
+<ol>
+<li>Push your topic branch up to your fork:</li>
+</ol>
+
+<pre><code class="bash">   git push origin &lt;topic-branch-name&gt;
+</code></pre>
+
+<ol>
+<li><a href="https://help.github.com/articles/using-pull-requests/">Open a Pull Request</a>
+with a clear title and description.</li>
+</ol>
+
+<p><strong>IMPORTANT</strong>: By submitting a patch, you agree to allow the project
+owners to license your work under the terms of the <a href="LICENSE.txt">MIT License</a>.</p>
+
+</body>
+</html>

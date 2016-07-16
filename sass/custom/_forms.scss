@@ -1,0 +1,206 @@
+form {
+  @include span-columns( 12 );
+  margin: 3em 0em;
+  padding-bottom: 2em;
+  background: rgba(255,255,255,0.8);
+
+  @include media ($medium-screen) {
+    @include span-columns( 10 );
+    @include shift( 1 );
+  }
+
+  @include media ($large-screen) {
+    @include span-columns( 8 );
+    @include shift( 2 );
+  }
+
+
+  label {
+    margin-bottom: 0.25em;
+    font-weight: 400;
+  }
+
+  h1, p {
+    text-align: center;
+  }
+
+  h3 {
+    border-bottom: 1px solid #DDD;
+    padding-bottom: 0.5em;
+  }
+
+  fieldset {
+    margin-top: 3em;
+    padding: 0em 3em;
+  }
+
+  p {
+    margin-bottom: 1em;
+  }
+}
+
+.form-title {
+  background: rgba(255,255,255,0.5);
+  padding: 2em 0em 0.5em;
+}
+
+input[type="text"] {
+  outline: none;
+  display: block;
+  width: 100%;
+  border: 1px solid darken($white, 15%);
+  margin: 0 0 2em;
+  box-sizing: border-box;
+  font-weight: 400;
+  @include transition(.36s ease);
+
+  &:hover {
+    border: 1px solid $orange;
+  }
+
+  &:focus {
+    box-shadow: 0px 0px 5px 0px rgba($orange, 0.66);
+    color: $dark-gray;
+  }
+
+  &[type="submit"] {
+    margin-top: 2em;
+    padding: 1em 3em;
+    border-radius: 2px;
+    background-color: $orange;
+    color: $white;
+    line-height:2em;
+    font-weight: 700;
+    text-transform :uppercase;
+    letter-spacing: 2px;
+  }
+
+}
+
+.half-field {
+  @include span-columns( 12 );
+
+  @include media ($medium-screen) {
+    @include span-columns( 6 );
+
+    &:nth-of-type(even) {
+      @include omega;
+    }
+  }
+}
+
+.button {
+	border: 1px solid #bbb;
+	border-radius: .3em;
+	box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+	background: #f3f3f3; /* Old browsers */
+	background: -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e5e5e5)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #ffffff 0%,#e5e5e5 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #ffffff 0%,#e5e5e5 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #ffffff 0%,#e5e5e5 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%); /* W3C */
+}
+
+.custom-select select {
+	font-family: $font-family;
+	font-weight: 700;
+	color: #444;
+	line-height:1.3;
+	border-radius: .2em;
+}
+.custom-select::after {
+	width: 0;
+	height: 0;
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	border-top: 7px solid #666;
+	margin-top: -3px;
+}
+.custom-select {
+	border: 1px solid #bbb;
+  @include transition(.36s ease);
+}
+/* Hover style */
+.custom-select:hover {
+	border-color: $orange;
+}
+/* Focus style */
+.custom-select select:focus {
+	outline: none;
+	box-shadow: 0px 0px 5px rgba($orange, 1);
+	color: #222;
+}
+
+/* Set options to normal weight */
+.custom-select option {
+	font-weight:normal;
+}
+
+/* Container used for styling the custom select, the buttom class below adds the
+ * bg gradient, corners, etc. */
+.custom-select {
+	position: relative;
+	display: block;
+  background: #FFF;
+  border: 1px solid #EEE;
+}
+
+/* This is the native select, we're making everything but the text invisible so
+ * we can see the button styles in the wrapper */
+.custom-select select {
+	width: 100%;
+	margin: 0;
+	outline: none;
+	padding: .4em .8em .35em .8em;
+
+	/* Prefixed box-sizing rules necessary for older browsers */
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
+	/* Font size must be 16px to prevent iOS page zoom on focus */
+	font-size: 16px;
+}
+
+
+/* Custom arrow sits on top of the select - could be an image, SVG, icon font,
+ * etc. or the arrow could just baked into the bg image on the select. */
+.custom-select::after {
+	content: " ";
+	position: absolute;
+	top: 50%;
+	right: 1em;
+	z-index: 2;
+	/* These hacks make the select behind the arrow clickable in some browsers */
+	pointer-events: none;
+	display: none;
+}
+
+@supports ( -webkit-appearance: none ) or ( appearance: none )
+	/* Firefox <= 34 has a false positive on @supports( -moz-appearance: none )
+	 * @supports ( mask-type: alpha ) is Firefox 35+
+	 */
+	or ( ( -moz-appearance: none ) and ( mask-type: alpha ) ) {
+
+	/* Show custom arrow */
+	.custom-select::after {
+		display: block;
+	}
+
+	/* Remove select styling */
+	.custom-select select {
+		padding-right: 2em; /* Match-01 */
+		/* inside @supports so that iOS <= 8 display the native arrow */
+		background: none; /* Match-04 */
+		/* inside @supports so that Android <= 4.3 display the native arrow */
+		border: 1px solid transparent; /* Match-05 */
+
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+	}
+	.custom-select select:focus {
+		border-color: #aaa; /* Match-03 */
+	}
+}
