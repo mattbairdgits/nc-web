@@ -5,9 +5,12 @@
 .og-row {
   @include outer-container;
 }
-.landing {
-    background-color: white;
-    padding: 5em 0 9em;
+
+h1 {
+  @include media ($large-screen) {
+    font-size: modular-scale(4);
+    letter-spacing: 8px;
+  }
 }
 img {
   width: 100%;
@@ -16,6 +19,14 @@ img {
 .background { background-size: cover; }
 
 body {
-  background: url('../img/stardust.png') repeat;
+
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#45494c+0,393b3d+100 */
+  background: url('../img/background.png') repeat; /* Old browsers */
+  background: url('../img/background.png'), -moz-linear-gradient(top,  rgba(69,73,76,1) 0%, rgba(57,59,61,1) 100%); /* FF3.6-15 */
+  background: url('../img/background.png'), -webkit-linear-gradient(top,  rgba(69,73,76,1) 0%,rgba(57,59,61,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: url('../img/background.png'), linear-gradient(to bottom,  rgba(69,73,76,1) 0%,rgba(57,59,61,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45494c', endColorstr='#393b3d',GradientType=0 ); /* IE6-9 */
+
   padding-bottom: 8em;
 }

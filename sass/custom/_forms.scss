@@ -1,18 +1,20 @@
 form {
   @include span-columns( 12 );
-  margin: 3em 0em;
+  margin: 0em auto 3em;
   padding-bottom: 2em;
-  background: rgba(255,255,255,0.8);
+  background: rgba(255,255,255,0.9);
 
   @include media ($medium-screen) {
     @include span-columns( 10 );
     @include shift( 1 );
   }
 
-  @include media ($large-screen) {
-    @include span-columns( 8 );
-    @include shift( 2 );
+  @include media ($xlarge-screen) {
+    @include span-columns( 9 );
+    @include shift( 1.5 );
   }
+
+  box-shadow: 0px 1px 12em rgba(255,255,255,0.2);
 
 
   label {
@@ -20,18 +22,76 @@ form {
     font-weight: 400;
   }
 
-  h1, p {
+  legend {
+    @extend h3;
+    padding: 0em 1em;
+    margin-left: 0em;
+    margin-left: -1em;
+    color: $orange;
     text-align: center;
-  }
+    text-shadow: 0px 0px 10px rgba(255,255,255,0.9);
 
-  h3 {
-    border-bottom: 1px solid #DDD;
-    padding-bottom: 0.5em;
+    @include media ($large-screen) {
+      text-align: left;
+      margin-left: -1em;
+    }
   }
 
   fieldset {
-    margin-top: 3em;
-    padding: 0em 3em;
+    margin: 1em 1em 2em;
+    padding: 1em;
+    border: 2px solid $orange;
+
+    @include media ($medium-screen) {
+      margin: 2em 2em;
+      padding: 1.5em 2em 2em;
+    }
+
+    @include media ($large-screen) {
+      margin: 3em 3em;
+      padding: 2em 3em 3em;
+    }
+
+    &:last-of-type {
+      border: none;
+      padding: 0em;
+      margin-bottom: 1em;
+    }
+  }
+
+  .last-inputs {
+    margin: 1em 1em 2em;
+    padding: 1.5em 2em 0em;
+
+    @include media ($medium-screen) {
+      margin: 2em 2em 3em;
+      padding: 1.5em 2em 0.5em;
+    }
+
+    @include media ($large-screen) {
+      margin: 3em 3em;
+      padding: 2em 3em 1em;
+    }
+  }
+
+  textarea {
+    margin-bottom: 2em;
+    min-height: 7em;
+    font-family: $font-family;
+    font-size: 1.125em;
+
+    @include media ($large-screen) {
+      width: 75%;
+    }
+
+    &:hover {
+      border: 1px solid $orange;
+    }
+
+    &:focus {
+      box-shadow: 0px 0px 5px 0px rgba($orange, 0.66);
+      color: $dark-gray;
+    }
   }
 
   p {
@@ -40,39 +100,68 @@ form {
 }
 
 .form-title {
-  background: rgba(255,255,255,0.5);
-  padding: 2em 0em 0.5em;
-}
+  background: url('../img/background-translucent.png') repeat; /* Old browsers */
+  background: url('../img/background-translucent.png'),-moz-radial-gradient(center, ellipse cover, #3c3f42 0%, #2a2c2d 100%); /* FF3.6-15 */
+  background: url('../img/background-translucent.png'),-webkit-radial-gradient(center, ellipse cover, #3c3f42 0%,#2a2c2d 100%); /* Chrome10-25,Safari5.1-6 */
+  background: url('../img/background-translucent.png'),radial-gradient(ellipse at center, #3c3f42 0%,#2a2c2d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3c3f42', endColorstr='#2a2c2d',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  padding: 2em 2em 0.5em;
 
-input[type="text"] {
-  outline: none;
-  display: block;
-  width: 100%;
-  border: 1px solid darken($white, 15%);
-  margin: 0 0 2em;
-  box-sizing: border-box;
-  font-weight: 400;
-  @include transition(.36s ease);
-
-  &:hover {
-    border: 1px solid $orange;
+  & h1 {
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 0px 0px 8px rgba(255,255,255,0.3)
   }
 
-  &:focus {
-    box-shadow: 0px 0px 5px 0px rgba($orange, 0.66);
-    color: $dark-gray;
+}
+
+input {
+
+  &[type="text"] {
+    outline: none;
+    display: block;
+    width: 100%;
+    border: 1px solid darken($white, 15%);
+    margin: 0 0 1em;
+    box-sizing: border-box;
+    font-family: $font-family;
+    font-weight: 700;
+    @include transition(.36s ease);
+
+    &:hover {
+      border: 1px solid $orange;
+    }
+
+    &:focus {
+      box-shadow: 0px 0px 5px 0px rgba($orange, 0.66);
+      color: $dark-gray;
+    }
   }
 
   &[type="submit"] {
-    margin-top: 2em;
-    padding: 1em 3em;
+    margin: 0em auto;
+    padding: 0.33em;
+    width: 100%;
     border-radius: 2px;
-    background-color: $orange;
-    color: $white;
-    line-height:2em;
+    background-color: darken($orange, 4%);
+    color: #FFF;
+    font-family: $font-family;
+    font-size: 1.5em;
+    line-height: 2em;
     font-weight: 700;
     text-transform :uppercase;
     letter-spacing: 2px;
+    box-shadow: 0px 6px 66px 0px rgba(255,255,255,0.8);
+    text-shadow: 1px 1px 33px rgba(255,255,255,0.2);
+
+    @include transition( all 0.36s );
+
+
+    &:hover {
+      color: $white;
+      background-color: lighten($orange, 4%);
+      text-shadow: 1px 1px 33px rgba(255,255,255,0.5);
+    }
   }
 
 }
@@ -119,6 +208,7 @@ input[type="text"] {
 }
 .custom-select {
 	border: 1px solid #bbb;
+  margin: 0 0 1em;
   @include transition(.36s ease);
 }
 /* Hover style */

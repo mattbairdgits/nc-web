@@ -1756,6 +1756,39 @@
 		"randomFootnoteNumbers": 0,
 		"useCompatibilityMode": 0
 		},
+	"\/favicon.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 942,
+		"inputAbbreviatedPath": "\/favicon.png",
+		"outputAbbreviatedPath": "\/favicon.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/background-translucent.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 80,
+		"inputAbbreviatedPath": "\/img\/background-translucent.png",
+		"outputAbbreviatedPath": "\/img\/background-translucent.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/background.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 86,
+		"inputAbbreviatedPath": "\/img\/background.png",
+		"outputAbbreviatedPath": "\/img\/background.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/neocron-logo.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -1763,17 +1796,6 @@
 		"initialSize": 48338,
 		"inputAbbreviatedPath": "\/img\/neocron-logo.png",
 		"outputAbbreviatedPath": "\/img\/neocron-logo.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/stardust.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 33145,
-		"inputAbbreviatedPath": "\/img\/stardust.png",
-		"outputAbbreviatedPath": "\/img\/stardust.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1826,6 +1848,17 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/plugins.js",
 		"outputAbbreviatedPath": "\/js\/min\/plugins-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/js\/vendor\/countries.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/vendor\/countries.js",
+		"outputAbbreviatedPath": "\/js\/vendor\/min\/countries-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -2492,7 +2525,7 @@
 	},
 "hooks": [
 	],
-"lastSavedByUser": "Matthew Baird",
+"lastSavedByUser": "Matt Baird",
 "manualImportLinks": {
 	},
 "projectAttributes": {

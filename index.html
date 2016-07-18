@@ -8,12 +8,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="icon" href="favicon.ico?v=2" />
         <!-- Place favicon.ico in the root directory -->
 
         <link rel="stylesheet" href="css/screen.css">
+        <script type= "text/javascript" src="js/vendor/countries.js"></script>
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
         <script src="https://use.typekit.net/shh6etn.js"></script>
         <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -25,22 +29,16 @@
             <a href="index.html" class="logo-container">
               <img src="img/neocron-logo.png" alt="Neocron Classic Community Edition">
             </a>
-            <!-- <a href="#" class="navigation-menu-button" id="js-mobile-menu">MENU</a> -->
-            <nav role="navigation">
-              <ul id="js-navigation-menu" class="navigation-menu show">
-                <li class="nav-link"><a href="index.html">Forum</a></li>
-              </ul>
-            </nav>
           </div>
         </header>
 
         <form>
           <div class="form-title">
-            <h1>Beta Sign-Up</h1>
+            <h1>Beta Sign&#8209;Up</h1>
           </div>
 
             <fieldset>
-              <h3>Personal Information</h3>
+              <legend>Personal Information</legend>
 
               <div class="half-field">
                 <label for="text_field">First Name</label>
@@ -55,39 +53,24 @@
               <div class="half-field">
                 <label for="select_element">Country</label>
                 <div class="custom-select button">
-                  <select name="select_element">
-                    <option value="1">Option 1</option>
-                    <option value="2">Option 2</option>
-                    <option value="3">Option 3</option>
-                    <!-- <optgroup label="Option Group 1">
-                      <option value="1">Option 1</option>
-                      <option value="2">Option 2</option>
-                      <option value="3">Option 3</option>
-                    </optgroup>
-                    <optgroup label="Option Group 2">
-                      <option value="1">Option 1</option>
-                      <option value="2">Option 2</option>
-                      <option value="3">Option 3</option>
-                    </optgroup> -->
+                  <select onchange="print_state('state',this.selectedIndex);" id="country" name="country">
                 </select>
               </div>
               </div>
 
               <div class="half-field">
-                <label for="select_element">State</label>
+                <label for="select_element">State/Province</label>
                   <div class="custom-select button">
-                    <select name="select_element">
-                      <option value="1">Option 1</option>
-                      <option value="2">Option 2</option>
-                      <option value="3">Option 3</option>
+                    <select name="state" id="state">
                     </select>
+                    <script language="javascript">print_country("country");</script>
                   </div>
               </div>
 
             </fieldset>
 
             <fieldset>
-              <h3>Computer Stats</h3>
+              <legend>Computer Stats</legend>
 
               <div class="half-field">
                 <label for="select_element">CPU Brand</label>
@@ -123,9 +106,13 @@
                 <label for="select_element">RAM</label>
                   <div class="custom-select button">
                     <select name="select_element">
-                      <option value="1">Option 1</option>
-                      <option value="2">Option 2</option>
-                      <option value="3">Option 3</option>
+                      <option value="1">&lt; 1 GB</option>
+                      <option value="2">1 GB - 4 GB</option>
+                      <option value="4">4 GB - 8 GB</option>
+                      <option value="5">1 GB - 16 GB</option>
+                      <option value="6">1 GB - 24 GB</option>
+                      <option value="7">1 GB - 32 GB</option>
+                      <option value="8">32+ GB</option>
                     </select>
                   </div>
               </div>
@@ -134,30 +121,33 @@
                 <label for="select_element">Operating System</label>
                   <div class="custom-select button">
                     <select name="select_element">
-                      <option value="1">Windows</option>
-                      <option value="2">Mac</option>
-                      <option value="3">Something for nerds</option>
+                      <option value="1">Windows x86</option>
+                      <option value="2">Windows x64</option>
+                      <option value="3">MacOS</option>
+                      <option value="4">Alternative OS</option>
                     </select>
                   </div>
               </div>
 
             </fieldset>
 
-          <fieldset>
+          <fieldset class="last-inputs">
 
-            <h3>I can't think of a title for this</h3>
+            <legend>Beta-Testing Familiarity</legend>
 
-            <label for="text_area">If you've played Neocron before, briefly describe your experience</label>
+            <label for="text_area">If you've played Neocron before, briefly describe your&nbsp;experience</label>
               <textarea id="text_area_ncexperience"></textarea>
 
-            <label for="text_area">Why should we choose you?</label>
+            <label for="text_area">Why should we choose&nbsp;you?</label>
               <textarea id="text_area_whyyou"></textarea>
 
-            <label for="text_area">Are you comfortable filling out bug reports?</label>
+            <label for="text_area">Are you comfortable filling out bug&nbsp;reports?</label>
               <textarea id="text_area_bugcomfort"></textarea>
 
-            <input type="submit" value="Submit" />
+          </fieldset>
 
+          <fieldset>
+            <input type="submit" value="Sign Up" />
           </fieldset>
 
         </form>
@@ -166,5 +156,6 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+
     </body>
 </html>
