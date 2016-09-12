@@ -31,6 +31,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/bower_components\/bitters\/_bower.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/bitters\/_bower.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/bower_components\/bitters\/_bower-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
 	"\/bower_components\/bitters\/contrib\/index.html": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -320,6 +331,17 @@
 		"shouldRunAutoprefixer": 0,
 		"shouldRunBless": 0,
 		"useLibsass": 0
+		},
+	"\/bower_components\/html5-boilerplate\/_bower.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/html5-boilerplate\/_bower.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/bower_components\/html5-boilerplate\/_bower-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
 		},
 	"\/bower_components\/html5-boilerplate\/CHANGELOG.html": {
 		"fileType": 8192,
@@ -3051,6 +3073,17 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
+		},
+	"\/bower_components\/neat\/_bower.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/neat\/_bower.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/bower_components\/neat\/_bower-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
 		},
 	"\/bower_components\/neat\/app\/assets\/stylesheets\/_neat-helpers.scss": {
 		"createSourceMap": 0,
@@ -7416,6 +7449,17 @@
 		"randomFootnoteNumbers": 0,
 		"useCompatibilityMode": 0
 		},
+	"\/favicon.ico.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 450,
+		"inputAbbreviatedPath": "\/favicon.ico.png",
+		"outputAbbreviatedPath": "\/favicon.ico.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/favicon.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -7514,8 +7558,6 @@
 		"syntaxCheckerStyle": 1
 		},
 	"\/js\/vendor\/countries.js": {
-<<<<<<< HEAD
-=======
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
@@ -7527,12 +7569,33 @@
 		"syntaxCheckerStyle": 1
 		},
 	"\/js\/vendor\/jquery-1.12.0.min.js": {
->>>>>>> origin/master
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/vendor\/countries.js",
-		"outputAbbreviatedPath": "\/js\/vendor\/min\/countries-min.js",
+		"inputAbbreviatedPath": "\/js\/vendor\/jquery-1.12.0.min.js",
+		"outputAbbreviatedPath": "\/js\/vendor\/min\/jquery-1.12.0.min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/js\/vendor\/min\/jquery-1.12.0.min-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/vendor\/min\/jquery-1.12.0.min-min.js",
+		"outputAbbreviatedPath": "\/js\/vendor\/min\/min\/jquery-1.12.0.min-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/js\/vendor\/min\/modernizr-2.8.3.min-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/vendor\/min\/modernizr-2.8.3.min-min.js",
+		"outputAbbreviatedPath": "\/js\/vendor\/min\/min\/modernizr-2.8.3.min-min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -8206,7 +8269,7 @@
 	},
 "projectAttributes": {
 	"bowerAbbreviatedPath": "",
-	"displayValue": "_web",
+	"displayValue": "nc-web",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "globe_darkGray"
 	},

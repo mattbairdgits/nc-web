@@ -1,5 +1,4 @@
 header.navigation {
-<<<<<<< HEAD
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
   $action-color: #477DCA !default;
@@ -8,7 +7,6 @@ header.navigation {
   $navigation-padding: 4em;
   $navigation-background: $dark-gray;
   $navigation-color: transparentize(white, 0.3);
-=======
 
   .logo-container {
     width: 90%;
@@ -30,7 +28,6 @@ header.navigation {
   $navigation-padding: 1em;
   $navigation-background: #333;
   $navigation-color: #bada55;
->>>>>>> origin/master
   $navigation-color-hover: white;
   $navigation-height: 120px;
   $navigation-nav-button-background: $action-color;
@@ -48,10 +45,7 @@ header.navigation {
   min-height: $navigation-height;
   width: 100%;
   z-index: 999;
-<<<<<<< HEAD
-=======
   padding: 1em 0;
->>>>>>> origin/master
 
   .navigation-wrapper {
     @include clearfix;
@@ -119,7 +113,6 @@ header.navigation {
 
   // Nav menu
 
-<<<<<<< HEAD
   nav {
     float: none;
     // min-height: $navigation-height;
@@ -335,7 +328,7 @@ header.navigation {
       }
     }
   }
-=======
+
   // nav {
   //   float: none;
   //   min-height: $navigation-height;
@@ -473,7 +466,6 @@ header.navigation {
   //     }
   //   }
   // }
->>>>>>> origin/master
 
   // Elements on the far right
 
