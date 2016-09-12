@@ -16,13 +16,14 @@ h6 {
   font-size: modular-scale(1);
   line-height: $heading-line-height;
   margin: 0 0 $small-spacing;
+  color: #555;
 }
 
 h1 {
-  font-size: modular-scale(4);
-  font-weight: 300;
+  font-size: modular-scale(3);
+  font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 8px;
+  letter-spacing: 6px;
 }
 
 h2 {
@@ -41,7 +42,7 @@ a {
   &:active,
   &:focus,
   &:hover {
-    color: shade($action-color, 25%);
+    color: lighten($action-color, 15%);
   }
 }
 

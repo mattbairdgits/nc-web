@@ -8,163 +8,119 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="icon" href="favicon.ico?v=2" />
         <!-- Place favicon.ico in the root directory -->
 
         <link rel="stylesheet" href="css/screen.css">
+        <script type= "text/javascript" src="js/vendor/countries.js"></script>
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
         <script src="https://use.typekit.net/shh6etn.js"></script>
         <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+
     </head>
     <body>
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
+
         <header class="navigation" role="banner">
-          <div class="navigation-wrapper">
-            <a href="index.html" class="logo-container">
-              <img src="img/neocron-logo.png" alt="Neocron Classic Community Edition">
-            </a>
-            <!-- <a href="#" class="navigation-menu-button" id="js-mobile-menu">MENU</a> -->
-            <nav role="navigation">
-              <ul id="js-navigation-menu" class="navigation-menu show">
-                <li class="nav-link"><a href="index.html">Forum</a></li>
-              </ul>
-            </nav>
-          </div>
-        </header>
+  <div class="navigation-wrapper">
+    <a href="index.html" class="logo">
+      <img src="img/neocron-logo.png" alt="Neocron Classic Community Edition">
+    </a>
+    <div class="menu-button-container">
+      <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">MENU</a>
+    </div>
+    <div class="rightify">
+      <nav role="navigation">
+        <ul id="js-navigation-menu" class="navigation-menu show">
+          <li class="nav-link"><a href="account.html">My Account</a></li>
+          <li class="nav-link"><a href="https://forum.neocron.org/">Community</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
 
         <form>
-          <div class="form-title">
-            <h1>Beta Sign-Up</h1>
+          <div class="epic-title">
+            <h1>Beta Sign&#8209;Up</h1>
           </div>
 
             <fieldset>
-              <h3>Personal Information</h3>
+              <!-- <legend>Who THE fuck do you think you are</legend> -->
 
-              <div class="half-field">
+              <div class="small-field">
                 <label for="text_field">First Name</label>
                 <input type="text" id="text_field_firstname" />
               </div>
 
-              <div class="half-field">
+              <div class="small-field">
                 <label for="text_field">Last Name</label>
                 <input type="text" id="text_field_lastname" />
               </div>
 
-              <div class="half-field">
+              <div class="small-field">
+                <label for="text_field">Email</label>
+                <input type="text" id="text_field_email" />
+              </div>
+
+              <div class="small-field">
                 <label for="select_element">Country</label>
                 <div class="custom-select button">
-                  <select name="select_element">
-                    <option value="1">Option 1</option>
-                    <option value="2">Option 2</option>
-                    <option value="3">Option 3</option>
-                    <!-- <optgroup label="Option Group 1">
-                      <option value="1">Option 1</option>
-                      <option value="2">Option 2</option>
-                      <option value="3">Option 3</option>
-                    </optgroup>
-                    <optgroup label="Option Group 2">
-                      <option value="1">Option 1</option>
-                      <option value="2">Option 2</option>
-                      <option value="3">Option 3</option>
-                    </optgroup> -->
+                  <select onchange="print_state('state',this.selectedIndex);" id="country" name="country">
                 </select>
               </div>
               </div>
 
-              <div class="half-field">
-                <label for="select_element">State</label>
+              <div class="small-field gentrifier">
+                <label for="select_element">State/Province</label>
                   <div class="custom-select button">
-                    <select name="select_element">
-                      <option value="1">Option 1</option>
-                      <option value="2">Option 2</option>
-                      <option value="3">Option 3</option>
+                    <select name="state" id="state">
                     </select>
+                    <script language="javascript">print_country("country");</script>
                   </div>
               </div>
 
-            </fieldset>
+              <hr>
 
-            <fieldset>
-              <h3>Computer Stats</h3>
-
-              <div class="half-field">
-                <label for="select_element">CPU Brand</label>
-                  <div class="custom-select button">
-                    <select name="select_element">
-                      <option value="1">AMD</option>
-                      <option value="2">Intel</option>
-                    </select>
-                  </div>
+              <div class="small-field mr">
+                <label for="text_field">Username</label>
+                <input type="text" id="text_field_username" data-parsley-maxlength="42"/>
               </div>
 
-              <div class="half-field">
-                <label for="text_field">CPU Model</label>
-                  <input type="text" id="text_field_cpumodel" />
+              <div class="small-field">
+                <label for="text_field">Password</label>
+                <input type="text" id="text_field_password" />
               </div>
 
-              <div class="half-field">
-                <label for="select_element">Video Card Brand</label>
-                  <div class="custom-select button">
-                    <select name="select_element">
-                      <option value="1">ATI</option>
-                      <option value="2">NVIDIA</option>
-                    </select>
-                  </div>
-              </div>
-
-              <div class="half-field">
-                <label for="text_field">Video Card Model</label>
-                  <input type="text" id="text_field_videocard" />
-              </div>
-
-              <div class="half-field">
-                <label for="select_element">RAM</label>
-                  <div class="custom-select button">
-                    <select name="select_element">
-                      <option value="1">Option 1</option>
-                      <option value="2">Option 2</option>
-                      <option value="3">Option 3</option>
-                    </select>
-                  </div>
-              </div>
-
-              <div class="half-field">
-                <label for="select_element">Operating System</label>
-                  <div class="custom-select button">
-                    <select name="select_element">
-                      <option value="1">Windows</option>
-                      <option value="2">Mac</option>
-                      <option value="3">Something for nerds</option>
-                    </select>
-                  </div>
+              <div class="small-field no-mr">
+                <label for="text_field">Confirm Password</label>
+                <input type="text" id="text_field_confirmpassword" />
               </div>
 
             </fieldset>
 
           <fieldset>
-
-            <h3>I can't think of a title for this</h3>
-
-            <label for="text_area">If you've played Neocron before, briefly describe your experience</label>
-              <textarea id="text_area_ncexperience"></textarea>
-
-            <label for="text_area">Why should we choose you?</label>
-              <textarea id="text_area_whyyou"></textarea>
-
-            <label for="text_area">Are you comfortable filling out bug reports?</label>
-              <textarea id="text_area_bugcomfort"></textarea>
-
-            <input type="submit" value="Submit" />
-
+            <input type="submit" value="Sign Up" />
           </fieldset>
 
         </form>
 
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+        <script src="js/min/plugins-min.js"></script>
+        <script src="js/min/main-min.js"></script>
+
+        <script>
+          var instance = $('#text_field_username').parsley();
+          console.log(instance.isValid()); // maxlength is 42, so field is valid
+          $('#text_field_username').attr('data-parsley-maxlength', 4);
+          console.log(instance.isValid()); // No longer valid, as maxlength is 4
+        </script>
+
+
     </body>
 </html>

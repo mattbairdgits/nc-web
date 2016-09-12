@@ -1,98 +1,107 @@
 header.navigation {
-
-  .logo-container {
-    max-width: 446px;
-    display: inline-block;
-  }
-
-  a {
-    text-decoration: none;
-    font-family: $base-font-family;
-  }
-
-  $navigation-padding: 1em;
-  $navigation-background: #333;
-  $navigation-color: #bada55;
+  $base-border-color: gainsboro !default;
+  $base-border-radius: 3px !default;
+  $action-color: #477DCA !default;
+  $dark-gray: #333 !default;
+  $large-screen: 53.75em !default;
+  $navigation-padding: 4em;
+  $navigation-background: $dark-gray;
+  $navigation-color: transparentize(white, 0.3);
   $navigation-color-hover: white;
-  $navigation-height: 100px;
-  $navigation-nav-button-background: #FF9900;
-  $navigation-nav-button-background-hover: lighten($navigation-background, 10);
-  $navigation-nav-button-border: 1px solid lighten($navigation-nav-button-background, 20);
+  $navigation-height: 120px;
+  $navigation-nav-button-background: $action-color;
+  $navigation-nav-button-background-hover: lighten($navigation-background, 10%);
+  $navigation-nav-button-border: 1px solid lighten($navigation-nav-button-background, 20%);
+  $navigation-search-background: lighten($navigation-background, 5);
+  $navigation-search-border: 1px solid darken($navigation-background, 5);
   $navigation-active-link-color: transparentize(white, 0.5);
   $navigation-submenu-padding: 1em;
   $navigation-submenu-width: 12em;
   $horizontal-bar-mode: $large-screen;
 
+  // background-color: $navigation-background;
+  // border-bottom: 1px solid darken($navigation-background, 10);
   min-height: $navigation-height;
   width: 100%;
   z-index: 999;
-  padding-top: 1em;
 
   .navigation-wrapper {
     @include clearfix;
-    padding-right: $base-spacing;
-    margin-top: 1em;
-    margin-bottom: 2em;
     position: relative;
     z-index: 9999;
-
-    @include media ($small-screen) {
-      margin-top: 3em;
-    }
+    padding: 2em 0 1em;
 
     @include media ($horizontal-bar-mode) {
-      margin: 1em 2em 0 2em;
+      padding: 2em 0;
     }
   }
 
+  .logo {
+    max-height: $navigation-height;
+    width: 90%;
+    display: block;
+    margin: 0 auto;
 
+    @include media ($horizontal-bar-mode) {
+      float: left;
+      width: auto;
+      padding-left: $navigation-padding;
+    }
 
+    img {
+      max-height: $navigation-height;
+      max-width: 446px;
+      padding: 0.8em 0;
+      display: block;
+      margin: 0 auto;
+    }
 
+  }
 
   // Mobile view
-  //
-  // .navigation-menu-button {
-  //   color: $navigation-color;
-  //   display: block;
-  //   float: right;
-  //   font-weight: 700;
-  //   margin-top: 2em;
-  //   padding: 0.5em 1em;
-  //   color: $white;
-  //   background-color: #bada55;
-  //   text-transform: uppercase;
-  //   letter-spacing: 4px;
-  //
-  //   @include media ($small-screen) {
-  //     padding: 1em 2em;
-  //     margin-top: 0.5em;
-  //   }
-  //
-  //   @include media ($horizontal-bar-mode) {
-  //     display: none;
-  //   }
-  //
-  //   &:hover {
-  //     color: $white;
-  //     background-color: #bada55;
-  //     @include transition( all 0.36s );
-  //   }
-  // }
+
+  .menu-button-container {
+    width: 100%;
+    text-align: center;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    @include media ($horizontal-bar-mode) {
+      margin: 0;
+    }
+  }
+
+  .navigation-menu-button {
+    color: $navigation-color;
+    margin: 0;
+    padding: 1em 1em;
+    border-top: 1px solid #eeeeee;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 6px rgba(255,255,255,0.2);
+
+    @include media ($horizontal-bar-mode) {
+      display: none;
+    }
+
+    &:focus,
+    &:hover {
+      color: $navigation-color-hover;
+    }
+  }
 
   // Nav menu
 
   nav {
     float: none;
-    min-height: $navigation-height;
+    // min-height: $navigation-height;
     z-index: 9999999;
 
     @include media ($horizontal-bar-mode) {
-      float: right;
+      float: left;
     }
   }
 
   ul.navigation-menu {
-    -webkit-transform-style: preserve-3d; // stop webkit flicker
     clear: both;
     display: none;
     margin: 0 auto;
@@ -106,8 +115,10 @@ header.navigation {
     }
 
     @include media ($horizontal-bar-mode) {
-      display: inline;
+      display: block;
       margin: 0;
+      clear: none;
+      float: right;
       padding: 0;
     }
   }
@@ -116,48 +127,49 @@ header.navigation {
 
   ul li.nav-link {
     display: block;
+    line-height: $navigation-height/2;
     overflow: hidden;
-    text-align: right;
-    width: 100%;
     z-index: 9999;
-    margin-right: 3em;
-    &:last-child {
-      margin-right:0;
+    text-align: center;
+    margin-bottom: 0.5em;
+
+    &:last-of-type {
+      margin-bottom: 0em;
     }
+
 
     @include media ($horizontal-bar-mode) {
       background: transparent;
       display: inline;
+      line-height: $navigation-height;
       text-decoration: none;
       width: auto;
+      margin-right: 1em;
+
+      &:last-of-type {
+        margin-right: 0em;
+      }
     }
 
     a {
-      display: inline-block;
-      margin-top: 1em;
-      padding: 1em 3em;
-      border-radius: 2px;
-      border: 1px solid rgba(255,255,255,0.7);
-      color: $white;
-      line-height:2em;
-      font-weight: 700;
-      text-transform :uppercase;
-      letter-spacing: 2px;
-      -webkit-box-shadow: 0px 6px 66px 0px rgba(255,255,255,0.1);
-      -moz-box-shadow: 0px 6px 66px 0px rgba(255,255,255,0.1);
-      box-shadow: 0px 6px 66px 0px rgba(255,255,255,0.1);
+      color: $navigation-color;
+      text-decoration: none;
+      padding: 1em 1em;
+      border: 1px solid #eeeeee;
+      border-radius: 1337px;
+      text-shadow: 0px 0px 6px rgba(255,255,255,0.2);
 
-      @include transition( all 0.36s );
-
-      &:hover {
-        color: $white;
-        background-color: darken($navigation-nav-button-background, 4%);
-        border: 1px solid darken($navigation-nav-button-background, 4%);
-        -webkit-box-shadow: 0px 6px 50px 0px rgba(0,0,0,0.2);
-        -moz-box-shadow: 0px 6px 50px 0px rgba(0,0,0,0.2);
-        box-shadow: 0px 6px 50px 0px rgba(0,0,0,0.2);
+      @include media ($horizontal-bar-mode) {
+        display: inline;
+        margin-bottom: 0em;
       }
 
+
+      &:focus,
+      &:hover {
+        color: $navigation-color-hover;
+        background-color: rgba(lighten($navigation-background, 10), 0.6);
+      }
     }
   }
 
@@ -167,6 +179,67 @@ header.navigation {
   }
 
   // Sub menus
+
+  li.more.nav-link {
+    padding-right: 0;
+
+    @include media($horizontal-bar-mode) {
+      padding-right: $navigation-submenu-padding;
+    }
+
+    > ul > li:first-child a  {
+      padding-top: 1em;
+    }
+
+    a {
+      margin-right: $navigation-submenu-padding;
+    }
+
+    > a {
+      padding-right: 0.6em;
+    }
+
+    > a::after {
+      @include position(absolute, auto -0.4em auto auto);
+      color: $navigation-color;
+      content: "\25BE";
+    }
+  }
+
+  li.more {
+    overflow: visible;
+    padding-right: 0;
+
+    a {
+      padding-right: 0.8em;
+    }
+
+    > a {
+      padding-right: 1.6em;
+      position: relative;
+
+      @include media($horizontal-bar-mode) {
+        margin-right: $navigation-submenu-padding;
+      }
+
+      &::after {
+        content: "›";
+        font-size: 1.2em;
+        position: absolute;
+        right: $navigation-submenu-padding / 2;
+      }
+    }
+
+    &:focus > .submenu,
+    &:hover > .submenu {
+      display: block;
+    }
+
+    @include media($horizontal-bar-mode) {
+      padding-right: 0.8em;
+      position: relative;
+    }
+  }
 
   ul.submenu {
     display: none;
@@ -178,9 +251,23 @@ header.navigation {
       top: 1.5em;
     }
 
+    .submenu.fly-out-right {
+      @include media($horizontal-bar-mode) {
+        left: $navigation-submenu-width - 0.2em;
+        top: 0;
+      }
+    }
+
+    .submenu.fly-out-left {
+      @include media($horizontal-bar-mode) {
+        left: -$navigation-submenu-width + 0.2em;
+        top: 0;
+      }
+    }
+
     .submenu {
       @include media($horizontal-bar-mode) {
-        left: $navigation-submenu-width - .2em;
+        left: $navigation-submenu-width - 0.2em;
         top: 0;
       }
     }
@@ -193,21 +280,22 @@ header.navigation {
         line-height: $navigation-height / 1.3;
 
         &:first-child > a {
-          border-radius: $base-border-radius;
+          border-top-left-radius: $base-border-radius;
+          border-top-right-radius: $base-border-radius;
         }
 
         &:last-child > a {
-          border-radius: $base-border-radius;
-          padding-bottom: .7em;
+          border-bottom-left-radius: $base-border-radius;
+          border-bottom-right-radius: $base-border-radius;
+          padding-bottom: 0.7em;
         }
       }
 
       a {
-        background-color: darken($navigation-background, 3);
+        background-color: darken($navigation-background, 3%);
         display: inline-block;
         text-align: right;
         width: 100%;
-
 
         @include media($horizontal-bar-mode) {
           background-color: $navigation-background;
@@ -219,4 +307,76 @@ header.navigation {
     }
   }
 
+  // Elements on the far right
+
+  .rightify {
+
+    @include media($horizontal-bar-mode) {
+      margin-right: $navigation-padding;
+      clear: none;
+      float: right;
+    }
+  }
+
+  // Search bar
+
+  .search-bar {
+    $search-bar-border-color: $base-border-color;
+    $search-bar-border: 1px solid $search-bar-border-color;
+    $search-bar-background: lighten($search-bar-border-color, 10%);
+
+    float: left;
+    padding: 0.85em 0.85em 0.7em 0.6em;
+    width: 60%;
+
+    form {
+      position: relative;
+
+      input[type=search] {
+        background: $navigation-search-background;
+        border: $navigation-search-border;
+        border-radius: $base-border-radius * 2;
+        box-sizing: border-box;
+        color: $navigation-color;
+        font-size: 0.9em;
+        font-style: italic;
+        margin: 0;
+        padding: 0.5em 0.8em;
+        width: 100%;
+
+        @include media($horizontal-bar-mode) {
+          width: 100%;
+        }
+      }
+
+      button[type=submit] {
+        background: $navigation-search-background;
+        border: 0;
+        bottom: 0.3em;
+        left: auto;
+        outline: none;
+        padding: 0 9px;
+        position: absolute;
+        right: 0.3em;
+        top: 0.3em;
+
+        img {
+          height: 12px;
+          opacity: 0.7;
+          padding: 1px;
+        }
+      }
+    }
+
+    @include media($horizontal-bar-mode) {
+      display: inline-block;
+      position: relative;
+      width: 16em;
+
+      input {
+        box-sizing: border-box;
+        display: block;
+      }
+    }
+  }
 }
