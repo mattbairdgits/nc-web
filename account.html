@@ -1,0 +1,85 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Neocron | Account Management</title>
+        <meta name="description" content="Manage your account for the Neocron Classic Community Edition Beta">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="icon" href="favicon.ico?v=2" />
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/screen.css">
+        <script type= "text/javascript" src="js/vendor/countries.js"></script>
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <script src="https://use.typekit.net/shh6etn.js"></script>
+        <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+
+        <header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+    <a href="index.html" class="logo">
+      <img src="img/neocron-logo.png" alt="Neocron Classic Community Edition">
+    </a>
+    <div class="menu-button-container">
+      <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">MENU</a>
+    </div>
+    <div class="rightify">
+      <nav role="navigation">
+        <ul id="js-navigation-menu" class="navigation-menu show">
+          <li class="nav-link"><a href="account.html">My Account</a></li>
+          <li class="nav-link"><a href="https://forum.neocron.org/">Community</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+      <div class="content-box">
+        <div class="epic-title">
+          <h1>Account Management</h1>
+        </div>
+        <div class="content-wrapper">
+          <div class="account-info">
+            <h4>Account</h4>
+            <p>
+              Chum_fiesta&nbsp;&nbsp;<a href="javascript:void(0)">[Edit]</a><br>
+              <a href="javascript:void(0)">Change Password</a>
+            </p>
+          </div>
+          <div class="personal-info">
+            <h4>Personal</h4>
+            <p>
+              Cletus McApple<br>
+              Bio-Bio, Chile<br>
+              cleetmcpappy@gmail.com&nbsp;&nbsp;<a href="javascript:void(0)">[Edit]</a>
+          </p>
+          </div>
+        </div>
+      </div>
+
+
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+        <script src="js/min/plugins-min.js"></script>
+        <script src="js/min/main-min.js"></script>
+
+        <script>
+          var instance = $('#text_field_username').parsley();
+          console.log(instance.isValid()); // maxlength is 42, so field is valid
+          $('#text_field_username').attr('data-parsley-maxlength', 4);
+          console.log(instance.isValid()); // No longer valid, as maxlength is 4
+        </script>
+
+
+    </body>
+</html>
