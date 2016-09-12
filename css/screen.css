@@ -300,7 +300,24 @@ body {
 header.navigation {
   min-height: 120px;
   width: 100%;
+<<<<<<< HEAD
   z-index: 999; }
+=======
+  z-index: 999;
+  padding: 1em 0; }
+  header.navigation .logo-container {
+    width: 90%;
+    max-width: 446px;
+    display: block;
+    margin: 2em auto;
+    text-align: center; }
+    @media screen and (min-width: 900px) {
+      header.navigation .logo-container {
+        width: 100%; } }
+  header.navigation a {
+    text-decoration: none;
+    font-family: Helvetica; }
+>>>>>>> origin/master
   header.navigation .navigation-wrapper {
     position: relative;
     z-index: 9999;
@@ -311,6 +328,7 @@ header.navigation {
       display: block; }
     @media screen and (min-width: 900px) {
       header.navigation .navigation-wrapper {
+<<<<<<< HEAD
         padding: 2em 0; } }
   header.navigation .logo {
     max-height: 120px;
@@ -591,6 +609,112 @@ form textarea {
     color: #333; }
 form p {
   margin-bottom: 1em; }
+=======
+        margin: 1em 2em 0 2em; } }
+
+form {
+  float: left;
+  display: block;
+  margin-right: 2.3576520234%;
+  width: 100%;
+  margin: 0em auto 3em;
+  padding-bottom: 2em;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0px 1px 12em rgba(255, 255, 255, 0.2); }
+  form:last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 600px) {
+    form {
+      float: left;
+      display: block;
+      margin-right: 2.3576520234%;
+      width: 82.9403913294%;
+      margin-left: 8.5298043353%; }
+      form:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 1400px) {
+    form {
+      float: left;
+      display: block;
+      margin-right: 2.3576520234%;
+      width: 74.4105869942%;
+      margin-left: 12.7947065029%; }
+      form:last-child {
+        margin-right: 0; } }
+  form label {
+    margin-bottom: 0.25em;
+    font-weight: 400; }
+  form legend {
+    padding: 0em 1em;
+    margin-left: 0em;
+    margin-left: -1em;
+    color: #FF9900;
+    text-align: center;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.9); }
+    @media screen and (min-width: 900px) {
+      form legend {
+        text-align: left;
+        margin-left: -1em; } }
+  form fieldset {
+    margin: 1em 1em 2em;
+    padding: 1em;
+    border: 2px solid #FF9900; }
+    @media screen and (min-width: 600px) {
+      form fieldset {
+        margin: 2em 2em;
+        padding: 1.5em 2em 2em; } }
+    @media screen and (min-width: 900px) {
+      form fieldset {
+        margin: 3em 3em;
+        padding: 2em 3em 3em; } }
+    form fieldset:last-of-type {
+      border: none;
+      padding: 0em;
+      margin-bottom: 1em; }
+  form .last-inputs {
+    margin: 1em 1em 2em;
+    padding: 1.5em 2em 0em; }
+    @media screen and (min-width: 600px) {
+      form .last-inputs {
+        margin: 2em 2em 3em;
+        padding: 1.5em 2em 0.5em; } }
+    @media screen and (min-width: 900px) {
+      form .last-inputs {
+        margin: 3em 3em;
+        padding: 2em 3em 1em; } }
+  form textarea {
+    margin-bottom: 2em;
+    min-height: 7em;
+    font-family: "purista-web", sans-serif;
+    font-size: 1.125em; }
+    @media screen and (min-width: 900px) {
+      form textarea {
+        width: 75%; } }
+    form textarea:hover {
+      border: 1px solid #FF9900; }
+    form textarea:focus {
+      box-shadow: 0px 0px 5px 0px rgba(255, 153, 0, 0.66);
+      color: #333; }
+  form p {
+    margin-bottom: 1em; }
+
+.form-title {
+  background: url("../img/background-translucent.png") repeat;
+  /* Old browsers */
+  background: url("../img/background-translucent.png"), -moz-radial-gradient(center, ellipse cover, #3c3f42 0%, #2a2c2d 100%);
+  /* FF3.6-15 */
+  background: url("../img/background-translucent.png"), -webkit-radial-gradient(center, ellipse cover, #3c3f42 0%, #2a2c2d 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: url("../img/background-translucent.png"), radial-gradient(ellipse at center, #3c3f42 0%, #2a2c2d 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3c3f42', endColorstr='#2a2c2d',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+  padding: 2em 2em 0.5em; }
+  .form-title h1 {
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.3); }
+>>>>>>> origin/master
 
 input[type="text"] {
   outline: none;
@@ -627,6 +751,7 @@ input[type="submit"] {
   -webkit-transition: all 0.36s;
   -moz-transition: all 0.36s;
   transition: all 0.36s; }
+<<<<<<< HEAD
   @media screen and (min-width: 600px) {
     input[type="submit"] {
       float: left;
@@ -636,10 +761,13 @@ input[type="submit"] {
       margin-left: 25.5894130058%; }
       input[type="submit"]:last-child {
         margin-right: 0; } }
+=======
+>>>>>>> origin/master
   input[type="submit"]:hover {
     color: #fff;
     background-color: #ffa114;
     text-shadow: 1px 1px 33px rgba(255, 255, 255, 0.5); }
+<<<<<<< HEAD
 
 .small-field {
   float: left;
@@ -695,6 +823,8 @@ hr {
       margin: 3em 3em; } }
   .content-wrapper:last-of-type {
     margin-bottom: 1em; }
+=======
+>>>>>>> origin/master
 
 .account-info, .personal-info {
   float: left;
