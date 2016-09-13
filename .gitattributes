@@ -1,0 +1,12 @@
+### Check me into the root of the repo
+### as .gitattributes
+*.jpg binary
+*.png binary
+*.gif binary
+
+*.html -text=auto
+*.htm -text=auto
+*.css -text=auto
+*.scss -text=auto
+*.sass -text=auto
+*.js -text=auto
