@@ -83,6 +83,7 @@ form {
   }
 }
 
+// Input styles
 input {
 
   &[type="text"] {
@@ -90,7 +91,7 @@ input {
     display: block;
     width: 100%;
     border: 1px solid darken($white, 15%);
-    margin: 0 0 1em;
+    margin-bottom: 0.25em;
     box-sizing: border-box;
     font-family: $font-family;
     font-weight: 700;
@@ -137,9 +138,30 @@ input {
   }
 
 }
+// END Input styles
+
+// Error styles
+.error-text {
+  font-size: 0.825em;
+  color: $error-red;
+  font-style: italic;
+}
+
+.error-input {
+  border: 1px solid $error-red !important;
+
+  &:hover {
+    border: 1px solid lighten($error-red, 10%) !important;
+  }
+  &:focus {
+    border: 1px solid $orange !important;
+  }
+}
+// END Error styles
 
 .small-field {
   @include span-columns( 12 );
+  margin-bottom: 1em;
 
   @include media ($medium-screen) {
     @include span-columns( 6 );
@@ -202,10 +224,6 @@ hr {
     &:nth-of-type(even) {
       @include omega;
     }
-  }
-
-  h4 {
-
   }
 }
 

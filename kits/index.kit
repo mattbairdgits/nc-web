@@ -27,27 +27,29 @@
 
         <!-- @include navigation.kit -->
 
-        <form>
+        <form name="signup-form">
           <div class="epic-title">
             <h1>Beta Sign&#8209;Up</h1>
           </div>
 
             <fieldset>
-              <!-- <legend>Who THE fuck do you think you are</legend> -->
 
               <div class="small-field">
                 <label for="text_field">First Name</label>
-                <input type="text" id="text_field_firstname" />
+                <input type="text" name="text_field_firstname" id="text_field_firstname" class="error-input" />
+                <div id="text_field_firstname_errors" class="error-text"></div>
               </div>
 
               <div class="small-field">
                 <label for="text_field">Last Name</label>
-                <input type="text" id="text_field_lastname" />
+                <input type="text" name="text_field_lastname" id="text_field_lastname" />
+                <div id="text_field_lastname_errors" class="error-text"></div>
               </div>
 
               <div class="small-field">
                 <label for="text_field">Email</label>
-                <input type="text" id="text_field_email" />
+                <input type="text" name="text_field_email" id="text_field_email" />
+                <div id="text_field_email_errors" class="error-text"></div>
               </div>
 
               <div class="small-field">
@@ -71,17 +73,20 @@
 
               <div class="small-field mr">
                 <label for="text_field">Username</label>
-                <input type="text" id="text_field_username" data-parsley-maxlength="42"/>
+                <input type="text" name="text_field_username" id="text_field_username" />
+                <div id="text_field_username_errors" class="error-text"></div>
               </div>
 
               <div class="small-field">
                 <label for="text_field">Password</label>
-                <input type="text" id="text_field_password" />
+                <input type="password" name="text_field_password" id="text_field_password" />
+                <div id="text_field_password_errors" class="error-text"></div>
               </div>
 
               <div class="small-field no-mr">
                 <label for="text_field">Confirm Password</label>
-                <input type="text" id="text_field_confirmpassword" />
+                <input type="password" name="text_field_confirmpassword" id="text_field_confirmpassword" />
+                <div id="text_field_confirmpassword_errors" class="error-text"></div>
               </div>
 
             </fieldset>
@@ -97,11 +102,65 @@
         <script src="js/min/plugins-min.js"></script>
         <script src="js/min/main-min.js"></script>
 
+        <script src="js/validate.js"></script>
+
         <script>
-          var instance = $('#text_field_username').parsley();
-          console.log(instance.isValid()); // maxlength is 42, so field is valid
-          $('#text_field_username').attr('data-parsley-maxlength', 4);
-          console.log(instance.isValid()); // No longer valid, as maxlength is 4
+          $(function() {
+            var validator = new FormValidator('signup-form', [
+              {
+                'name': 'text_field_firstname',
+                'display': 'First Name',
+                'rules': 'required|alpha_dash'
+              },
+              {
+                'name': 'text_field_lastname',
+                'display': 'Last Name',
+                'rules': 'required|alpha_dash'
+              },
+              {
+                'name': 'text_field_email',
+                'display': 'E-Mail Address',
+                'rules': 'required|valid_email'
+              },
+              {
+                'name': 'text_field_username',
+                'display': 'Username',
+                'rules': 'required|alpha_numeric'
+              },
+              {
+                'name': 'text_field_password',
+                'display': 'Password',
+                'rules': 'required'
+              },
+              {
+                'name': 'text_field_confirmpassword',
+                'display': 'Password Confirmation',
+                'rules': 'required|matches[text_field_password]'
+              },
+              { // Not sure what to do with drop downs yet.
+                'name': 'country',
+                'display': 'Country',
+                'rules': 'required'
+              }
+            ], function(errors, event) {
+              if (errors.length > 0) {
+                event.preventDefault();
+                console.log(errors);
+                for (var i = 0; i < errors.length; i++) {
+                  var er = errors[i];
+                  var id = $(er.element).attr('id');
+                  for (var j = 0; j < er.messages.length; j++) {
+                    $("#" + id + "_errors").append("<span class=\"some-error-crap\">" + er.messages[j] + " </span>");
+                  }
+
+                  console.log({error: errors, el: id});
+                }
+              }
+            });
+            // Example of how you can set custom error messages
+            validator.setMessage('required', '%s required.');
+            validator.setMessage('matches', '%s must match %s');
+          });
         </script>
 
 
