@@ -597,7 +597,7 @@ input[type="text"] {
   display: block;
   width: 100%;
   border: 1px solid #d9d9d9;
-  margin: 0 0 1em;
+  margin-bottom: 0.25em;
   box-sizing: border-box;
   font-family: "purista-web", sans-serif;
   font-weight: 700;
@@ -641,11 +641,24 @@ input[type="submit"] {
     background-color: #ffa114;
     text-shadow: 1px 1px 33px rgba(255, 255, 255, 0.5); }
 
+.error-text {
+  font-size: 0.825em;
+  color: #B9223B;
+  font-style: italic; }
+
+.error-input {
+  border: 1px solid #B9223B !important; }
+  .error-input:hover {
+    border: 1px solid #da3450 !important; }
+  .error-input:focus {
+    border: 1px solid #FF9900 !important; }
+
 .small-field {
   float: left;
   display: block;
   margin-right: 2.3576520234%;
-  width: 100%; }
+  width: 100%;
+  margin-bottom: 1em; }
   .small-field:last-child {
     margin-right: 0; }
   @media screen and (min-width: 600px) {
