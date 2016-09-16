@@ -22,24 +22,24 @@ form {
   }
 
   fieldset {
-    margin: 1em 1em 2em;
+    margin: 1em 1em;
     // padding: 1em;
     // // border: 2px solid $orange;
     //
     @include media ($medium-screen) {
-      margin: 2em 2em;
+      margin: 2em 2em 1em;
       // padding: 1.5em 2em 2em;
     }
 
     @include media ($large-screen) {
-      margin: 3em 3em;
+      margin: 3em 3em 1em;
       // padding: 2em 3em 3em;
     }
 
     &:last-of-type {
       // border: none;
       // padding: 0em;
-      margin-bottom: 1em;
+      margin-top: 1em;
     }
   }
 
@@ -137,6 +137,11 @@ input {
     }
   }
 
+}
+
+.check-presenter {
+  text-align: center;
+  margin-bottom: 1.25em;
 }
 // END Input styles
 
